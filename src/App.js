@@ -1,9 +1,10 @@
 import './style/style.css'
+import Header from './components/top-sub/header'
 
 function App() {
   return (
     <div className="App">
-      <p>Code Will Go Here</p>
+      <Header/>
     </div>
   );
 }
