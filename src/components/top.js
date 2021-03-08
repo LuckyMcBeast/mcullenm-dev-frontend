@@ -7,11 +7,10 @@ const Top = (props) => {
 
 
     return (
-        <div>
-            <p>Top</p>
-            <Header/>
-            <Banner/>
-            <DevIcons/>
+        <div className="Top">
+        <Header/>
+        <Banner/>
+        <DevIcons/>
         </div>
     )
 }

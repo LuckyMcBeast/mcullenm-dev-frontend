@@ -1,1 +1,91 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+/*
+#ffd42aff : yellow
+#55ddffff : lightBlue
+#ff6600ff : orange
+#00d4aaff : green
+
+*/
+body {
+  background-color: #cfe3deff;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #082830;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+}
+
+body .app {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body a {
+  text-decoration: none;
+  color: #31454b;
+  font-size: medium;
+  font-weight: 400;
+}
+
+.Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #006680ff;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.Header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+}
+
+.Header nav a {
+  background-color: #ffd42aff;
+  padding: 0.5em 1em;
+  text-align: center;
+  border: solid 2px rgba(68, 102, 102, 0.514);
+  border-radius: 3px;
+  margin: 0 0.5em;
+}
+
+.Header nav a:hover {
+  background-color: #00d4aaff;
+}
+
+.Header .headLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+
+.Header .headLogo h1 {
+  color: #cfe3deff;
+  font-size: medium;
+  margin-top: 0%;
+}
+
+.Header .headLogo img {
+  width: 5em;
+}
+/*# sourceMappingURL=style.css.map */
