@@ -1,0 +1,81 @@
+$primary : #cfe3deff;
+$secondary : #006680ff;
+
+$textColor : #082830;
+$linkColor : #31454b;
+
+$accentYellow : #ffd42aff;
+$accentBlue : #55ddffff;
+$accentOrange :  #ff6600ff;
+$accentGreen : #00d4aaff;
+
+/*
+#ffd42aff : yellow
+#55ddffff : lightBlue
+#ff6600ff : orange
+#00d4aaff : green
+
+*/
+
+body { 
+    background-color: $primary;
+    display: block;
+    justify-content: center;
+    color: $textColor;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    .app {
+        width: 100%;
+        display: flex;
+    }
+    a {
+        text-decoration: none;
+        color: $linkColor;
+        font-size: medium;
+        font-weight: 400;
+    }
+}
+
+
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $secondary;
+    width: 100%;
+    margin-bottom: 1em;
+
+    nav {
+        display: flex;
+        padding: 1em;
+        a {
+            background-color: $accentYellow;
+            padding: 0.5em 1em;
+            text-align: center;
+            border: solid 2px rgba(68, 102, 102, 0.514);
+            border-radius: 3px;
+            margin: 0 0.5em;
+            &:hover{
+                background-color: $accentGreen;
+            }
+        }
+    }
+    .headLogo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+        h1 {
+            color: $primary;
+            font-size: medium;
+            margin-top: 0%;
+        }
+        img {
+            width: 5em;
+            
+        }
+    }
+
+    
+}
