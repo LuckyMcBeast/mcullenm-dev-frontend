@@ -128,7 +128,30 @@ body a {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
-  text-shadow: 2px 2px 5px black;
   color: #cfe3deff;
+}
+
+.DevIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #006680ff;
+  margin-top: 2em;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.DevIcons * {
+  color: #55ddffff;
+  width: 3em;
+  height: 3em;
+  padding: 1em 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -106,9 +106,21 @@ body {
             text-align: center;
             font-size: 4rem;
             font-weight: 500;
-            text-shadow: 2px 2px 5px black;
+            //text-shadow: 2px 2px 5px black;
             color: $primary;
         }
     }
-    
+}
+
+.DevIcons {
+    @include flexCenter();
+    background-color: $secondary;
+    margin-top: 2em;
+    justify-content: space-evenly;
+    *{
+        color: $accentBlue;
+        width: 3em;
+        height: 3em;
+        padding: 1em 0;
+    }
 }

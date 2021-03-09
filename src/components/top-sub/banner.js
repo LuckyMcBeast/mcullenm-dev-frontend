@@ -1,5 +1,4 @@
 import React from 'react'
-import bannerimage from '../../img/mountcodeReduced.png'
 
 const Banner = (props) => {
 
