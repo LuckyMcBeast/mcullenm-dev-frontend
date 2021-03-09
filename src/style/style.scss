@@ -9,13 +9,17 @@ $accentBlue : #55ddffff;
 $accentOrange :  #ff6600ff;
 $accentGreen : #00d4aaff;
 
-/*
-#ffd42aff : yellow
-#55ddffff : lightBlue
-#ff6600ff : orange
-#00d4aaff : green
+$primaryTrans : rgba(207, 227, 222, 0.863);
+$accentBlueTrans : rgba(85, 221, 255, 0.25);
+$secondaryTrans : rgba(0, 102, 128, 0.25);
 
-*/
+$border: solid 2px rgba(68, 102, 102, 0.514);
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 body { 
     background-color: $primary;
@@ -36,13 +40,16 @@ body {
     }
 }
 
-
+.Top {
+    background-image: url('../img/mountcodeBlue.png');
+    background-position: center;
+}
 
 .Header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $secondary;
+    // background-color: $secondaryTrans;
     width: 100%;
 
     nav {
@@ -81,7 +88,27 @@ body {
 }
 
 .Banner {
-    display: flex;
-    background-image: url('../img/mountcode.png');
-    height: 40em;
+    @include flexCenter();
+    height: 25em;
+    .CenterBannerContent {
+        @include flexCenter();
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        //background-color: $primary;
+        //border: $border;
+        //border-radius: 3px;
+        padding: 1em;
+        * {
+            padding: 0.5em;
+        }
+        h1 {
+            text-align: center;
+            font-size: 4rem;
+            font-weight: 500;
+            text-shadow: 2px 2px 5px black;
+            color: $primary;
+        }
+    }
+    
 }

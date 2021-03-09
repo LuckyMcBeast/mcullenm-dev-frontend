@@ -1,10 +1,3 @@
-/*
-#ffd42aff : yellow
-#55ddffff : lightBlue
-#ff6600ff : orange
-#00d4aaff : green
-
-*/
 body {
   background-color: #cfe3deff;
   display: block;
@@ -30,6 +23,11 @@ body a {
   font-weight: 400;
 }
 
+.Top {
+  background-image: url("../img/mountcodeBlue.png");
+  background-position: center;
+}
+
 .Header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,7 +38,6 @@ body a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #006680ff;
   width: 100%;
 }
 
@@ -93,7 +90,45 @@ body a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url("../img/mountcode.png");
-  height: 40em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 25em;
+}
+
+.Banner .CenterBannerContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1em;
+}
+
+.Banner .CenterBannerContent * {
+  padding: 0.5em;
+}
+
+.Banner .CenterBannerContent h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+  text-shadow: 2px 2px 5px black;
+  color: #cfe3deff;
 }
 /*# sourceMappingURL=style.css.map */
