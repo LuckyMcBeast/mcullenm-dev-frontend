@@ -42,7 +42,6 @@ body a {
           align-items: center;
   background-color: #006680ff;
   width: 100%;
-  margin-bottom: 1em;
 }
 
 .Header nav {
@@ -87,5 +86,14 @@ body a {
 
 .Header .headLogo img {
   width: 5em;
+  margin-top: 1em;
+}
+
+.Banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("../img/mountcode.png");
+  height: 40em;
 }
 /*# sourceMappingURL=style.css.map */

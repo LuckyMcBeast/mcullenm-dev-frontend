@@ -1,11 +1,12 @@
 import React from 'react'
+import bannerimage from '../../img/mountcode.png'
 
 const Banner = (props) => {
 
 
     return (
-        <div>
-            <p>Banner</p>
+        <div className="Banner">
+            
         </div>
     )
 }

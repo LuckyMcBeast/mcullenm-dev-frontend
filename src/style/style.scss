@@ -44,7 +44,6 @@ body {
     align-items: center;
     background-color: $secondary;
     width: 100%;
-    margin-bottom: 1em;
 
     nav {
         display: flex;
@@ -73,9 +72,16 @@ body {
         }
         img {
             width: 5em;
+            margin-top: 1em;
             
         }
     }
 
     
+}
+
+.Banner {
+    display: flex;
+    background-image: url('../img/mountcode.png');
+    height: 40em;
 }
