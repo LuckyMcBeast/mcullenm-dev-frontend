@@ -79,11 +79,13 @@ body a {
   color: #cfe3deff;
   font-size: medium;
   margin-top: 0%;
+  text-shadow: 1px 1px 5px black;
 }
 
 .Header .headLogo img {
-  width: 7em;
+  width: 12em;
   margin-top: 1em;
+  margin-left: 1em;
 }
 
 .Banner {
@@ -125,9 +127,11 @@ body a {
 }
 
 .Banner .CenterBannerContent h1 {
+  margin-top: -2em;
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
+  text-shadow: 1px 1px 3px black;
   color: #cfe3deff;
 }
 
@@ -146,12 +150,14 @@ body a {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-negative: 3;
+      flex-shrink: 3;
 }
 
 .DevIcons * {
-  width: 3em;
-  height: 3em;
-  padding: 1em 0;
+  width: 4em;
+  height: 4em;
+  padding: 1em;
 }
 
 .DevIcons .yellow {

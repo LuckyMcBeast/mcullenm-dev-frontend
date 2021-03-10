@@ -76,11 +76,12 @@ body {
             color: $primary;
             font-size: medium;
             margin-top: 0%;
+            text-shadow: 1px 1px 5px black;
         }
         img {
-            width: 7em;
+            width: 12em;
             margin-top: 1em;
-            
+            margin-left: 1em;
         }
     }
 
@@ -103,10 +104,11 @@ body {
             padding: 0.5em;
         }
         h1 {
+            margin-top: -2em;
             text-align: center;
             font-size: 4rem;
             font-weight: 500;
-            //text-shadow: 2px 2px 5px black;
+            text-shadow: 1px 1px 3px black;
             color: $primary;
         }
     }
@@ -117,10 +119,11 @@ body {
     background-color: $secondary;
     margin-top: 2em;
     justify-content: space-evenly;
+    flex-shrink: 3;
     *{
-        width: 3em;
-        height: 3em;
-        padding: 1em 0;
+        width: 4em;
+        height: 4em;
+        padding: 1em;
     }
     .yellow{
         color: $accentYellow;
