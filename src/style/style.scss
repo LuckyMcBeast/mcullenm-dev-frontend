@@ -41,7 +41,7 @@ body {
 }
 
 .Top {
-    background-image: url('../img/mountcodeBlue.png');
+    background-image: url('../img/mountcodeGrad.png');
     background-position: center;
 }
 
@@ -78,7 +78,7 @@ body {
             margin-top: 0%;
         }
         img {
-            width: 5em;
+            width: 7em;
             margin-top: 1em;
             
         }
@@ -118,9 +118,20 @@ body {
     margin-top: 2em;
     justify-content: space-evenly;
     *{
-        color: $accentBlue;
         width: 3em;
         height: 3em;
         padding: 1em 0;
+    }
+    .yellow{
+        color: $accentYellow;
+    }
+    .blue{
+        color: $accentBlue;
+    }
+    .green{
+        color: $accentGreen;
+    }
+    .orange{
+        color: $accentOrange;
     }
 }

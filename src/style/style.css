@@ -24,7 +24,7 @@ body a {
 }
 
 .Top {
-  background-image: url("../img/mountcodeBlue.png");
+  background-image: url("../img/mountcodeGrad.png");
   background-position: center;
 }
 
@@ -82,7 +82,7 @@ body a {
 }
 
 .Header .headLogo img {
-  width: 5em;
+  width: 7em;
   margin-top: 1em;
 }
 
@@ -149,9 +149,24 @@ body a {
 }
 
 .DevIcons * {
-  color: #55ddffff;
   width: 3em;
   height: 3em;
   padding: 1em 0;
+}
+
+.DevIcons .yellow {
+  color: #ffd42aff;
+}
+
+.DevIcons .blue {
+  color: #55ddffff;
+}
+
+.DevIcons .green {
+  color: #00d4aaff;
+}
+
+.DevIcons .orange {
+  color: #ff6600ff;
 }
 /*# sourceMappingURL=style.css.map */
