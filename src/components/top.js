@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './top-sub/header'
 import Banner from './top-sub/banner'
 import DevIcons from './top-sub/devicons'
+import waveTop from '../img/waveTop'
 
 const Top = (props) => {
 
