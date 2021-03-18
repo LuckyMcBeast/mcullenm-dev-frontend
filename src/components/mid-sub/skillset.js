@@ -4,7 +4,7 @@ const SkillSet = (props) => {
 
 
     return (
-        <div>
+        <div className="skill">
             <p>SkillSet</p>
         </div>
     )

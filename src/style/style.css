@@ -6,7 +6,8 @@ body {
           justify-content: center;
   color: #082830;
   font-family: 'Ubuntu', sans-serif;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 2560px;
 }
 
 body .app {
@@ -23,9 +24,26 @@ body a {
   font-weight: 400;
 }
 
+body span {
+  margin: -0.3em;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  -webkit-box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
 .Top {
-  background-image: url("../img/mountcodeGrad.png");
+  background-image: url("../img/mountcodeGradDarker.png");
   background-position: center;
+  background-size: cover;
 }
 
 .Header {
@@ -58,7 +76,8 @@ body a {
 }
 
 .Header nav a:hover {
-  background-color: #00d4aaff;
+  background-color: #ff6600ff;
+  color: #cfe3deff;
 }
 
 .Header .headLogo {
@@ -131,8 +150,27 @@ body a {
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
-  text-shadow: 1px 1px 3px black;
   color: #cfe3deff;
+}
+
+.softEng {
+  color: #ff6600ff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
+}
+
+.biz {
+  color: #00d4aaff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
+}
+
+.graphic {
+  color: #ffd42aff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
+}
+
+.learn {
+  color: #55ddffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
 }
 
 .DevIcons {
@@ -145,8 +183,12 @@ body a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-shadow: 0px 0 10px rgba(48, 48, 48, 0.658);
+          box-shadow: 0px 0 10px rgba(48, 48, 48, 0.658);
+  z-index: 100;
   background-color: #006680ff;
-  margin-top: 2em;
+  margin: 0;
+  padding: 2em 0;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -157,7 +199,7 @@ body a {
 .DevIcons * {
   width: 4em;
   height: 4em;
-  padding: 1em;
+  padding: 0 1em;
 }
 
 .DevIcons .yellow {
@@ -174,5 +216,15 @@ body a {
 
 .DevIcons .orange {
   color: #ff6600ff;
+}
+
+.wave {
+  width: 100%;
+  height: 8rem;
+  z-index: 5;
+}
+
+#waveTop {
+  margin-bottom: -0.3em;
 }
 /*# sourceMappingURL=style.css.map */
