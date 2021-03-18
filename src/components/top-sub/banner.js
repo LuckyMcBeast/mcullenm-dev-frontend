@@ -6,10 +6,10 @@ const Banner = (props) => {
     return (
         <div className="Banner">
             <div className="CenterBannerContent">
-                <h1>Full Stack Software Engineer<br/>
-                with a Background in Buisness,<br/> 
-                Graphic Design Competence, <br/>
-                and a Passion for Continuous Learning.</h1>
+                <h1>Full Stack<span className="softEng">Software Engineer</span><br/>
+                with a Background in<span className="biz">Buisness</span>,<br/> 
+                Compentence in<span className="graphic">Graphic Design</span>, <br/>
+                and a Passion for<span className="learn">Continuous Learning</span>.</h1>
             </div>
         </div>
     )

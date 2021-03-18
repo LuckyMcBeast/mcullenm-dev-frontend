@@ -21,13 +21,21 @@ $border: solid 2px rgba(68, 102, 102, 0.514);
     justify-content: center;
 }
 
+@mixin bannerAccent($colorValue){
+    color: $colorValue;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
+}
+
+
+
 body { 
     background-color: $primary;
     display: block;
     justify-content: center;
     color: $textColor;
     font-family: 'Ubuntu', sans-serif;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 2560px;
     .app {
         width: 100%;
         display: flex;
@@ -37,6 +45,9 @@ body {
         color: $linkColor;
         font-size: medium;
         font-weight: 400;
+    }
+    span{
+        margin: -0.3em;
     }
 }
 
@@ -52,15 +63,15 @@ body::before {
   }
 
 .Top {
-    background-image: url('../img/mountcodeGradDaker.png');
+    background-image: url('../img/mountcodeGradDarker.png');
     background-position: center;
+    background-size: cover;
 }
 
 .Header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // background-color: $secondaryTrans;
     width: 100%;
 
     nav {
@@ -74,7 +85,8 @@ body::before {
             border-radius: 3px;
             margin: 0 0.5em;
             &:hover{
-                background-color: $accentGreen;
+                background-color: $accentOrange;
+                color: $primary;
             }
         }
     }
@@ -119,22 +131,41 @@ body::before {
             text-align: center;
             font-size: 4rem;
             font-weight: 500;
-            text-shadow: 1px 1px 3px black;
+            //text-shadow: 1px 1px 3px black;
             color: $primary;
         }
     }
 }
 
+.softEng {
+    @include bannerAccent($accentOrange)
+}
+
+.biz {
+    @include bannerAccent($accentGreen)
+}
+
+.graphic {
+    @include bannerAccent($accentYellow)
+}
+
+.learn {
+    @include bannerAccent($accentBlue)
+}
+
 .DevIcons {
     @include flexCenter();
+    box-shadow: 0px 0 10px rgba(48, 48, 48, 0.658);
+    z-index: 100;
     background-color: $secondary;
     margin: 0;
-    padding-top: 2em;
+    padding: 2em 0;
     justify-content: space-evenly;
     flex-shrink: 3;
     *{
         width: 4em;
         height: 4em;
+        padding: 0 1em;
     }
     .yellow{
         color: $accentYellow;
@@ -153,6 +184,7 @@ body::before {
 .wave{
     width: 100%;
     height: 8rem;
+    z-index: 5;
 }
 #waveTop{
     margin-bottom: -0.3em;
