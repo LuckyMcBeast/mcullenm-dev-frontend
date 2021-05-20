@@ -20,10 +20,10 @@ const DisplayImage = (props) => {
 
 
 const SkillSet = (props) => {
-    const { skill, copy, image, link, directionSwitch } = props;
+    const { id, skill, copy, image, link, directionSwitch } = props;
 
     return (
-        <div className="skillContainer">
+        <div className="skillContainer" id={`SC${id}`}>
             {directionSwitch ?
                 <div className="skill">
                     <DisplayImage link={link} image={image}/>

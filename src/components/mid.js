@@ -6,14 +6,18 @@ import waveBottom from '../img/waveBottom3.png'
 import { skills } from '../utils/data'
 
 const Mid = (props) => {
-    const [directionSwitch, setDirectionSwitch] = useState(true);
-
+    let directionSwitch = false;
     return (
         <div>
-            <img className='wave' src={waveBottom}/>
-            <SkillSet skill={skills[0].skill} copy={skills[0].copy} image={skills[0].image} link={skills[0].link} directionSwitch={directionSwitch}/>
-            <BrandEdu/>
-            <RecentBlog/>
+            <img className='wave' src={waveBottom} />
+            <div className='skillSet'>
+                {skills.map((skill) => {
+                    directionSwitch = !directionSwitch
+                    return <SkillSet id={skill.id} skill={skill.skill} copy={skill.copy} image={skill.image} link={skill.link} directionSwitch={directionSwitch} />
+                })}
+            </div>
+            <BrandEdu />
+            <RecentBlog />
         </div>
     )
 }

@@ -26,6 +26,10 @@ $border: solid 2px rgba(68, 102, 102, 0.514);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
 }
 
+@mixin setSkillContainerBg($id){
+  
+}
+
 
 
 body { 
@@ -134,24 +138,25 @@ body::before {
             //text-shadow: 1px 1px 3px black;
             color: $primary;
         }
+        .softEng {
+            @include bannerAccent($accentOrange)
+        }
+        
+        .biz {
+            @include bannerAccent($accentGreen)
+        }
+        
+        .graphic {
+            @include bannerAccent($accentYellow)
+        }
+        
+        .learn {
+            @include bannerAccent($accentBlue)
+        }
     }
 }
 
-.softEng {
-    @include bannerAccent($accentOrange)
-}
 
-.biz {
-    @include bannerAccent($accentGreen)
-}
-
-.graphic {
-    @include bannerAccent($accentYellow)
-}
-
-.learn {
-    @include bannerAccent($accentBlue)
-}
 
 .DevIcons {
     @include flexCenter();
@@ -181,12 +186,46 @@ body::before {
     }
 }
 
+
 .wave{
+    position: absolute;
     width: 100%;
     height: 8rem;
-    z-index: 5;
+    z-index: 1;
 }
 #waveTop{
     margin-bottom: -0.3em;
 }
+
+
+.skillSet{
+    padding-top: 3em;
+    
+    .skill{
+        z-index: -1;
+        @include flexCenter();
+        > * {
+            width: 50%;
+            height: 20em;
+        }
+        .skillText{
+            @include flexCenter();
+            flex-direction: column;
+            margin: 0 2em;
+        }
+
+    }
+        
+    #SC0 {
+        background: $accentOrange;
+        }
+    #SC1 {
+        background: $accentGreen;
+        }
+    #SC2 {
+        background: $accentYellow;
+        }
+}
+    
+
 

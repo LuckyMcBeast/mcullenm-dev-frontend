@@ -153,22 +153,22 @@ body::before {
   color: #cfe3deff;
 }
 
-.softEng {
+.Banner .CenterBannerContent .softEng {
   color: #ff6600ff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
 }
 
-.biz {
+.Banner .CenterBannerContent .biz {
   color: #00d4aaff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
 }
 
-.graphic {
+.Banner .CenterBannerContent .graphic {
   color: #ffd42aff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
 }
 
-.learn {
+.Banner .CenterBannerContent .learn {
   color: #55ddffff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
 }
@@ -219,12 +219,64 @@ body::before {
 }
 
 .wave {
+  position: absolute;
   width: 100%;
   height: 8rem;
-  z-index: 5;
+  z-index: 1;
 }
 
 #waveTop {
   margin-bottom: -0.3em;
+}
+
+.skillSet {
+  padding-top: 3em;
+}
+
+.skillSet .skill {
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skillSet .skill > * {
+  width: 50%;
+  height: 20em;
+}
+
+.skillSet .skill .skillText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 2em;
+}
+
+.skillSet #SC0 {
+  background: #ff6600ff;
+}
+
+.skillSet #SC1 {
+  background: #00d4aaff;
+}
+
+.skillSet #SC2 {
+  background: #ffd42aff;
 }
 /*# sourceMappingURL=style.css.map */
