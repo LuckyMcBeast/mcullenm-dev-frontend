@@ -1,16 +1,14 @@
 import './style/style.css'
-import Top from './components/top'
-import Mid from './components/mid'
-import Bottom from './components/bottom'
+import DecorBar from "./components/bars/decorBar";
+
+const appLevelStyling = "p-0 bg-mine-shaft-500 w-screen"
 
 function App() {
-  return (
-    <div className="App">
-      <Top/>
-      <Mid/>
-      <Bottom/>
-    </div>
-  );
+    return (
+        <div className={appLevelStyling}>
+            <DecorBar/>
+        </div>
+    );
 }
 
 export default App;

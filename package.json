@@ -1,8 +1,9 @@
 {
-  "name": "portfolio-site",
+  "name": "mcullenm-dev-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.4.2",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
@@ -14,6 +15,9 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
+    "start-craco": "craco start",
+    "build-craco": "craco build",
+    "test-craco": "craco test",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,5 +40,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
 }
