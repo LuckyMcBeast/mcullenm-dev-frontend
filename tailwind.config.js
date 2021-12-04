@@ -46,6 +46,9 @@ module.exports = {
           "gutterGrey": "#4b5263",
           "commentGrey": "#5c6370"
         }
+      },
+      screens: {
+        'xs': '321px'
       }
     },
   },

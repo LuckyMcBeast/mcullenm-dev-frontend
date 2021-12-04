@@ -5,7 +5,7 @@ const textOneDarkLightYellow = "text-one-dark-lightYellow";
 const textOneDarkGreen = "text-one-dark-green";
 const textOneDarkMagenta = "text-one-dark-magenta";
 const textOneDarkBlue = "text-one-dark-blue";
-const h1TailWindStyling = "m-3 text-one-dark-white self-center text-right font-medium sm:font-black antialiased text-sm sm:text-lg"
+const h1TailWindStyling = "m-3 text-one-dark-white self-center text-right font-medium sm:font-black antialiased text-small xs:text-base sm:text-md md:text-lg"
 
 function spanValueWithClassName(text, className){
     return <span className={className}>{text}</span>;
