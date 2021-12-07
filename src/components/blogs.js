@@ -4,6 +4,7 @@ import BlogCard from "./blogCard";
 
 export default function Blogs(){
     const [blogs, setBlogs] = useState(null);
+    var error = ""
 
     const getBlogs = (() => {
         axios.get('https://mcullenm-dev-content-manager.herokuapp.com/api/blogs')
@@ -11,7 +12,10 @@ export default function Blogs(){
                 console.log(response.data)
                 setBlogs(response.data);
             })
-            .catch(err => { console.log(err)});
+            .catch(err => {
+                console.log(err);
+                error = err
+            });
     })
 
     useEffect(()=>{
@@ -19,6 +23,9 @@ export default function Blogs(){
     },[])
 
     if(blogs === null){
+        if(error !== ""){
+            return <h2>{error}</h2>
+        }
         return <h2>Loading</h2>
     }
     return(<div className="grid grid-flow-row grid-cols-1 w-full max-w-screen sm:grid-cols-3 gap-10 p-10 overflow-x-hidden">
