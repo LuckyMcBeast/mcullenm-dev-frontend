@@ -4,7 +4,7 @@ import BlogCard from "./blogCard";
 
 export default function Blogs(){
     const [blogs, setBlogs] = useState(null);
-    var error = ""
+    let error = "";
 
     const getBlogs = (() => {
         axios.get('https://mcullenm-dev-content-manager.herokuapp.com/api/blogs')
@@ -18,8 +18,8 @@ export default function Blogs(){
             });
     })
 
-    useEffect(()=>{
-        getBlogs()
+    useEffect(async () => {
+        await getBlogs()
     },[])
 
     if(blogs === null){
