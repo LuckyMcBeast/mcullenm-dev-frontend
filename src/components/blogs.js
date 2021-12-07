@@ -18,16 +18,10 @@ export default function Blogs(){
             });
     })
 
-    useEffect(async () => {
-        await getBlogs()
+    useEffect(() => {
+        getBlogs()
     },[])
 
-    if(blogs === null){
-        if(error !== ""){
-            return <h2>{error}</h2>
-        }
-        return <h2>Loading</h2>
-    }
     return(<div className="grid grid-flow-row grid-cols-1 w-full max-w-screen sm:grid-cols-3 gap-10 p-10 overflow-x-hidden">
         {blogs.map((data)=>{
             return (
