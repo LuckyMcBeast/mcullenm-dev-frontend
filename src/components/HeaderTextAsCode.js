@@ -5,7 +5,7 @@ const textOneDarkLightYellow = "text-one-dark-lightYellow";
 const textOneDarkGreen = "text-one-dark-green";
 const textOneDarkMagenta = "text-one-dark-magenta";
 const textOneDarkBlue = "text-one-dark-blue";
-const h1TailWindStyling = "m-3 text-one-dark-white self-center text-right font-medium sm:font-black antialiased text-small xs:text-base sm:text-md md:text-lg"
+const h1Styling = "m-3 text-one-dark-white self-center text-right font-medium sm:font-black antialiased text-small xs:text-base sm:text-md md:text-xl"
 
 function spanValueWithClassName(text, className){
     return <span className={className}>{text}</span>;
@@ -44,7 +44,7 @@ function returnHeaderText() {
 
 export default function HeaderTextAsCode() {
     return(
-        <h1 className={h1TailWindStyling}>
+        <h1 className={h1Styling} data-testid="headerTextAsCode">
             {returnHeaderText()}
         </h1>
     )

@@ -1,6 +1,6 @@
 import './style/style.css'
-import SideBar from "./components/sideBar";
-import MainContent from "./components/mainContent";
+import SideBar from "./components/SideBar";
+import MainContent from "./components/MainContent";
 import React from "react";
 
 const appLevelStyling = "p-0 bg-mine-shaft-500 w-screen grid max-w-screen"

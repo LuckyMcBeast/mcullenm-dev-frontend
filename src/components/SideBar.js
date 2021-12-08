@@ -7,11 +7,11 @@ const imgStyling = "w-16 min-h-20 m-2 p-2"
 
 export default function SideBar() {
     return (
-            <div className={topLevelDivStyling}>
-                <div className={logoDivStyling}>
+            <div className={topLevelDivStyling} data-testid="sideBar">
+                <div className={logoDivStyling} data-testid="logoContainer">
                     <img className={imgStyling} src={logo} alt="logo"/>
                 </div>
-                <div className="h-full"/>
+                <div className="h-full" data-testid="hFullDiv"/>
         </div>
     )
 }
