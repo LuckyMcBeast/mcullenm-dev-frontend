@@ -5,7 +5,7 @@ import BlogCard from "./BlogCard";
 const topLevelDivStyling = "grid grid-flow-row grid-cols-1 w-full max-w-screen sm:grid-cols-3 gap-10 p-10 overflow-x-hidden"
 
 function getBlogs(setBlogs){
-    axios.get('https://mcullenm-dev-content-manager.herokuapp.com/api/blogs')
+    axios.get('https://marine-compound-336602.uc.r.appspot.com/api/blogs')
         .then(response => {
             setBlogs(response.data);
         })
