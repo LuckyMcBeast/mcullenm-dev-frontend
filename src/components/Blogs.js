@@ -5,8 +5,9 @@ import BlogCard from "./BlogCard";
 const topLevelDivStyling = "grid grid-flow-row grid-cols-1 w-full max-w-screen sm:grid-cols-3 gap-10 p-10 overflow-x-hidden"
 
 function getBlogs(setBlogs){
-    axios.get('https://marine-compound-336602.uc.r.appspot.com/api/blogs')
+    axios.get(`${process.env.REACT_APP_CONTENT_MANAGER_URL}/api/blogs`)
         .then(response => {
+            console.log(response)
             setBlogs(response.data);
         })
         .catch(err => {
@@ -16,7 +17,7 @@ function getBlogs(setBlogs){
 
 export default function Blogs(){
     const [blogs, setBlogs] = useState(null);
-
+    
     useEffect(() => {
         getBlogs(setBlogs)
     },[])

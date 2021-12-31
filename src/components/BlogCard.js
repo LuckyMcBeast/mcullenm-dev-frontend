@@ -6,6 +6,7 @@ const blogTitleStyling = "text-xl font-semibold text-one-dark-cyan"
 const blogPublishDateStyling = "text-one-dark-white font-medium"
 const blogContentStyling = "text-one-dark-white"
 
+
 export default function BlogCard(props){
     const { key, blogData } = props;
 
@@ -13,7 +14,7 @@ export default function BlogCard(props){
         <div key={key} className={topLevelDivStyling}>
             <h2 className={blogTitleStyling}>{blogData.title}</h2>
             <h3 className={blogPublishDateStyling}>{blogData.publishDate}</h3>
-            <p className={blogContentStyling}>{blogData.content}</p>
+            <p className={blogContentStyling}>{blogData.content[0].value}</p>
         </div>
     )
 }
