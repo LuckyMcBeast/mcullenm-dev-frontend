@@ -4,6 +4,7 @@ import BlogCard from "./BlogCard";
 
 const topLevelDivStyling = "grid grid-flow-row grid-cols-1 w-full max-w-screen sm:grid-cols-3 gap-10 p-10 overflow-x-hidden"
 
+//TODO: Setup Redux for global state
 function getBlogs(setBlogs){
     axios.get(`${process.env.REACT_APP_CONTENT_MANAGER_URL}/api/blogs`)
         .then(response => {

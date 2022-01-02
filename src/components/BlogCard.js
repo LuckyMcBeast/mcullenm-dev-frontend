@@ -6,6 +6,7 @@ const blogTitleStyling = "text-xl font-semibold text-one-dark-cyan"
 const blogPublishDateStyling = "text-one-dark-white font-medium"
 const blogContentStyling = "text-one-dark-white"
 
+//TODO: Write test for parsing blogData
 
 export default function BlogCard(props){
     const { key, blogData } = props;
