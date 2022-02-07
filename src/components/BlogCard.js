@@ -11,11 +11,16 @@ const blogContentStyling = "text-one-dark-white"
 export default function BlogCard(props){
     const { key, blogData } = props;
 
+    function contentPreview(){
+        if(blogData.content[0] !== undefined)
+            return <p className={blogContentStyling}>{blogData.content[0].value}</p>
+    }
+
     return (
         <div key={key} className={topLevelDivStyling}>
             <h2 className={blogTitleStyling}>{blogData.title}</h2>
             <h3 className={blogPublishDateStyling}>{blogData.publishDate}</h3>
-            <p className={blogContentStyling}>{blogData.content[0].value}</p>
+            {contentPreview()}
         </div>
     )
 }
