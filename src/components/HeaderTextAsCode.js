@@ -1,9 +1,8 @@
 import React from "react";
 
-const textOneDarkDarkYellow = "text-one-dark-cyan";
 const textOneDarkLightYellow = "text-one-dark-lightYellow";
 const textOneDarkGreen = "text-one-dark-green";
-const textOneDarkMagenta = "text-one-dark-cyan";
+const textOneDarkCyan = "text-one-dark-cyan";
 const textOneDarkBlue = "text-one-dark-blue text-xl font-black sm:text-2xl";
 const h1Styling = "m-3 text-one-dark-white self-center text-right font-medium antialiased sm:font-black"
 
@@ -20,8 +19,8 @@ function makeParameterOfFunWithListType(parameterName, listType){
     const closeA = spanValue(">");
 
     const parameterNameWithStyle = spanValueWithClassName(parameterName, textOneDarkLightYellow);
-    const listTypeWithStyle = spanValueWithClassName(listType, textOneDarkDarkYellow);
-    const kotlinList = spanValueWithClassName(" List", textOneDarkDarkYellow);
+    const listTypeWithStyle = spanValueWithClassName(listType, textOneDarkCyan);
+    const kotlinList = spanValueWithClassName(" List", textOneDarkCyan);
 
     return <span>
         {parameterNameWithStyle}: {kotlinList}{openA}{listTypeWithStyle}{closeA}
@@ -29,7 +28,7 @@ function makeParameterOfFunWithListType(parameterName, listType){
 }
 
 function returnHeaderText() {
-    const fun = spanValueWithClassName("fun", textOneDarkMagenta);
+    const fun = spanValueWithClassName("fun", textOneDarkCyan);
     const mCullenMcclellan = spanValueWithClassName("mCullenMcClellan", textOneDarkBlue);
 
     const thoughtsParmeter = makeParameterOfFunWithListType("thoughts", "Thought")
