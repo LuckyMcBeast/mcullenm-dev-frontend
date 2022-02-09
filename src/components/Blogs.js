@@ -6,7 +6,7 @@ const topLevelDivStyling = "grid grid-flow-row grid-cols-1 w-full max-w-screen s
 
 //TODO: Setup Redux for global state
 function getBlogs(setBlogs){
-    axios.get(`${process.env.REACT_APP_CONTENT_MANAGER_URL}/api/blogs`)
+    axios.get(`${process.env.REACT_APP_CONTENT_MANAGER_URL}${process.env.REACT_APP_BLOG_ENDPOINT}`)
         .then(response => {
             console.log(response)
             setBlogs(response.data);

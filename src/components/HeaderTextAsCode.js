@@ -1,11 +1,11 @@
 import React from "react";
 
-const textOneDarkDarkYellow = "text-one-dark-darkYellow";
+const textOneDarkDarkYellow = "text-one-dark-cyan";
 const textOneDarkLightYellow = "text-one-dark-lightYellow";
 const textOneDarkGreen = "text-one-dark-green";
-const textOneDarkMagenta = "text-one-dark-magenta";
-const textOneDarkBlue = "text-one-dark-blue";
-const h1Styling = "m-3 text-one-dark-white self-center text-right font-medium sm:font-black antialiased text-small xs:text-base sm:text-md md:text-xl"
+const textOneDarkMagenta = "text-one-dark-cyan";
+const textOneDarkBlue = "text-one-dark-blue text-xl font-black sm:text-2xl";
+const h1Styling = "m-3 text-one-dark-white self-center text-right font-medium antialiased sm:font-black"
 
 function spanValueWithClassName(text, className){
     return <span className={className}>{text}</span>;

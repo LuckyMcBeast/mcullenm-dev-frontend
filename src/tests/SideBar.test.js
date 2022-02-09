@@ -18,20 +18,4 @@ describe("<SideBar/>", () => {
 
       expect(logo).toBeInTheDocument()
    })
-
-   //TODO: Implement test for hidden sidebar
-
-   // test('should be hidden when screen size is xs', () => {
-   //    Object.defineProperty(window, 'innerWidth', {
-   //       writable: true,
-   //       configurable: true,
-   //       value: 321,
-   //    });
-   //    window.dispatchEvent(new Event('resize'));
-   //    render(<SideBar/>)
-   //    const sideBar = screen.getByTestId("sideBar")
-   //
-   //    expect(window.innerWidth).toBe(321);
-   //    generatePluginCss()
-   // })
 });
