@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from "react-redux";
-import { getBlogs } from "../api/actions";
 import BlogCard from "./BlogCard";
+import { Link } from 'react-router-dom';
 
 const topLevelDivStyling = "grid grid-flow-row grid-cols-1 w-full max-w-screen sm:grid-cols-3 gap-10 p-10 overflow-x-hidden"
 
@@ -13,7 +13,9 @@ function Blogs(props){
     return(<div className={topLevelDivStyling} data-testid="blogs">
         {props.blogs.map((data)=>{
             return (
-                <BlogCard key={data.id} blogData={data}/>
+                <Link to={"/blog/" + data.blogId}>
+                    <BlogCard key={data.blogId} blogData={data}/>
+                </Link>
             )
         })}
     </div>)
