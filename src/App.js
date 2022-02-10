@@ -8,6 +8,7 @@ const topLevelDivStyling = "flex flex-row w-auto"
 
 //TODO: Implement react router for blogs and about 
 function App() {
+
     return (
         <div className={appLevelStyling}>
             <div className={topLevelDivStyling}>
@@ -18,4 +19,4 @@ function App() {
     );
 }
 
-export default App;
+export default App

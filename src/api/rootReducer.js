@@ -4,7 +4,7 @@ export const initState = {
     blogs : [],
     isLoading : false,
     error : '',
-    changes : true
+    changes : false
 }
 
 const reducer = (state = initState, action) => {
