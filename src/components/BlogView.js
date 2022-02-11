@@ -7,9 +7,23 @@ function getBlogById(id, blogs){
     return blogs.find(blog => blog.blogId === id)
 }
 
+function displayContent(content){
+    return content.map(
+        (content) => {
+            if(content.type === "p")
+                return <div><p>{content.value}</p></div>
+            return <div></div>
+         }
+    )
+}
+
 function BlogView(props){
     const id = useParams().id
     var blog = getBlogById(parseInt(id), props.blogs)
+
+    const divLevelStyling = "flex flex-col m-10 text-one-dark-white gap-y-3 font-ubuntu"
+    const h1Styling = "text-2xl font-bold text-rocket-blue-600"
+    const h3Styling = "text-sm italic text-one-dark-lightYellow"
     
     useEffect(() =>{
         if(blog === undefined){
@@ -19,19 +33,13 @@ function BlogView(props){
     
     if(blog === undefined){
         blog = getBlogById(parseInt(id), props.blogs)
-        return <h2>LOADING</h2>
+        return <h2 className="text-one-dark-white">LOADING</h2>
     }
     return (
-        <div>
-            <h1>{blog.title}</h1>
-            <h3>{blog.publishDate}</h3>
-            {blog.content.map(
-                (content) => { 
-                    if(content.type === "p") 
-                        return <div><p>{content.value}</p></div>
-                    return <div></div>
-                 }
-            )}
+        <div className={divLevelStyling}>
+            <h1 className={h1Styling}>{blog.title}</h1>
+            <h3 className={h3Styling}>{blog.publishDate}</h3>
+            {displayContent(blog.content)}
         </div>
     )
 }
