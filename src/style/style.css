@@ -6,9 +6,9 @@
   body {
     margin: 0;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-      font-family: "JetBrains Mono",'Ubuntu', 'Roboto', sans-serif;
-      overflow-x: hidden;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: "JetBrains Mono", "Ubuntu", "Roboto", sans-serif;
+    overflow-x: hidden;
   }
 }
