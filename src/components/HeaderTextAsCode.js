@@ -4,47 +4,65 @@ const textOneDarkLightYellow = "text-one-dark-lightYellow";
 const textOneDarkGreen = "text-one-dark-green";
 const textOneDarkCyan = "text-one-dark-cyan";
 const textOneDarkBlue = "text-one-dark-blue text-xl font-black sm:text-2xl";
-const h1Styling = "m-3 text-one-dark-white self-center text-right font-medium antialiased sm:font-black"
+const h1Styling =
+  "m-3 text-one-dark-white self-center text-right font-medium antialiased sm:font-black";
 
-function spanValueWithClassName(text, className){
-    return <span className={className}>{text}</span>;
+function spanValueWithClassName(text, className) {
+  return <span className={className}>{text}</span>;
 }
 
-function spanValue(text){
-    return <span>{text}</span>;
+function spanValue(text) {
+  return <span>{text}</span>;
 }
 
-function makeParameterOfFunWithListType(parameterName, listType){
-    const openA = spanValue("<");
-    const closeA = spanValue(">");
+function makeParameterOfFunWithListType(parameterName, listType) {
+  const openA = spanValue("<");
+  const closeA = spanValue(">");
 
-    const parameterNameWithStyle = spanValueWithClassName(parameterName, textOneDarkLightYellow);
-    const listTypeWithStyle = spanValueWithClassName(listType, textOneDarkCyan);
-    const kotlinList = spanValueWithClassName(" List", textOneDarkCyan);
+  const parameterNameWithStyle = spanValueWithClassName(
+    parameterName,
+    textOneDarkLightYellow
+  );
+  const listTypeWithStyle = spanValueWithClassName(listType, textOneDarkCyan);
+  const kotlinList = spanValueWithClassName(" List", textOneDarkCyan);
 
-    return <span>
-        {parameterNameWithStyle}: {kotlinList}{openA}{listTypeWithStyle}{closeA}
+  return (
+    <span>
+      {parameterNameWithStyle}: {kotlinList}
+      {openA}
+      {listTypeWithStyle}
+      {closeA}
     </span>
+  );
 }
 
 function returnHeaderText() {
-    const fun = spanValueWithClassName("fun", textOneDarkCyan);
-    const mCullenMcclellan = spanValueWithClassName("mCullenMcClellan", textOneDarkBlue);
+  const fun = spanValueWithClassName("fun", textOneDarkCyan);
+  const mCullenMcclellan = spanValueWithClassName(
+    "mCullenMcClellan",
+    textOneDarkBlue
+  );
 
-    const thoughtsParmeter = makeParameterOfFunWithListType("thoughts", "Thought")
-    const workParameter = makeParameterOfFunWithListType("work", "Work")
+  const thoughtsParmeter = makeParameterOfFunWithListType(
+    "thoughts",
+    "Thought"
+  );
+  const workParameter = makeParameterOfFunWithListType("work", "Work");
 
-    const questionMark = spanValueWithClassName("?", textOneDarkGreen);
+  const questionMark = spanValueWithClassName("?", textOneDarkGreen);
 
-    return <span>
-        {fun} {mCullenMcclellan}({thoughtsParmeter}{questionMark}, {workParameter})
+  return (
+    <span>
+      {fun} {mCullenMcclellan}({thoughtsParmeter}
+      {questionMark}, {workParameter})
     </span>
+  );
 }
 
 export default function HeaderTextAsCode() {
-    return(
-        <h1 className={h1Styling} data-testid="headerTextAsCode">
-            {returnHeaderText()}
-        </h1>
-    )
+  return (
+    <h1 className={h1Styling} data-testid="headerTextAsCode">
+      {returnHeaderText()}
+    </h1>
+  );
 }
