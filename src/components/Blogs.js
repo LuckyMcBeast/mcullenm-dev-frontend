@@ -10,7 +10,8 @@ function Blogs(props){
     if(props.isLoading){
         return <h2 data-testid="blogs">Loading</h2>
     }
-    return(<div className={topLevelDivStyling} data-testid="blogs">
+    return(
+    <div className={topLevelDivStyling} data-testid="blogs">
         {props.blogs.map((data)=>{
             return (
                 <Link to={"/blog/" + data.blogId}>
