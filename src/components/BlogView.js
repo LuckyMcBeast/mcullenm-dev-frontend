@@ -11,7 +11,7 @@ function displayContent(content){
     return content.map(
         (content) => {
             if(content.type === "p")
-                return <div><p>{content.value}</p></div>
+                return <p className="break-words">{content.value}</p>
             return <div></div>
          }
     )
@@ -21,7 +21,8 @@ function BlogView(props){
     const id = useParams().id
     var blog = getBlogById(parseInt(id), props.blogs)
 
-    const divLevelStyling = "flex flex-col m-10 text-one-dark-white gap-y-3 font-ubuntu"
+    const divLevelStyling = "flex flex-col p-10 text-one-dark-white gap-y-3 font-ubuntu w-screen sm:w-full"
+    const contentDivStyling = "flex flex-col gap-y-3 p-1"
     const h1Styling = "text-2xl font-bold text-rocket-blue-600"
     const h3Styling = "text-sm italic text-one-dark-lightYellow"
     
@@ -39,7 +40,9 @@ function BlogView(props){
         <div className={divLevelStyling}>
             <h1 className={h1Styling}>{blog.title}</h1>
             <h3 className={h3Styling}>{blog.publishDate}</h3>
-            {displayContent(blog.content)}
+            <div className={contentDivStyling}>
+                {displayContent(blog.content)}
+            </div>
         </div>
     )
 }
