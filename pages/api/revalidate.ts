@@ -6,7 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(401).json({ message: 'Unauthorized' })
     }
     try {
-        if(req.body.urls !== null && req.body.urls !== undefined && req.body.urls !== []){
+        if(req.body.urls !== null && req.body.urls !== undefined){
             for(const url of req.body.urls) {
                 await res.revalidate(url)
             }
