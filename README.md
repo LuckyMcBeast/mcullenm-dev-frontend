@@ -1,12 +1,10 @@
-# mcullenm-dev-frontend 0.01v
+# mcullenm-dev-frontend 0.5v
 
-Front-End React Web Application for mcullenm.dev
-
-### System Context
-
-![ContextView](FrontEndContextView.png)
+Front-End Next.js Web Application for mcullenm.dev
 
 ### Technologies Used:
 - React
+- Next.js
+- Typescript
+- Vercel
 - TailWind CSS
-
