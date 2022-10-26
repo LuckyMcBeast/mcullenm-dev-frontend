@@ -10,6 +10,9 @@ interface Props {
 }
 
 export default function Blogs(props: Props) {
+  if (props.blogs.length === 0 || props.blogs === undefined) {
+    return <h2 className="text-one-dark-white text-center p-10 font-jetBrains">Well this is embarrassing...</h2>
+  }
   return (
     <div className={topLevelDivStyling} data-testid="blogs">
       {props.blogs.map((data: Blog) => {
