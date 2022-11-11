@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { Blog } from "../types/blog"
 
-export default function blogHead(blog: Blog | null | undefined) {
+export default function BlogHead(blog: Blog | null | undefined) {
     if (blog !== null && blog !== undefined) {
         return (<Head>
             <title>{`${blog?.title} - M. Cullen McClellan`}</title>

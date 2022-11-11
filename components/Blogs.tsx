@@ -3,7 +3,7 @@ import { Blog } from "../types/blog";
 import BlogCard from "./BlogCard";
 
 const topLevelDivStyling =
-  "grid grid-flow-row grid-cols-1 w-full max-w-screen sm:grid-cols-3 gap-10 p-10 overflow-x-hidden";
+  "grid grid-flow-row grid-cols-1 w-full max-w-screen lg:grid-cols-2 md:grid-cols-2 gap-10 p-10 overflow-x-hidden";
 
 interface Props {
     blogs: Blog[]

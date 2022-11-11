@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "LuckyDev";
+  src: url("../fonts/LuckyDev.ttf");
+}
+
 @layer base {
   body {
     margin: 0;
@@ -10,12 +15,13 @@
     justify-content: center;
     font-family: "JetBrains Mono", "Ubuntu", "Roboto", sans-serif;
     overflow-x: hidden;
+    background-color: #2b302f;
   }
 }
 
 @layer components {
   .appLevelStyling {
-    @apply p-0 bg-mine-shaft-500 w-screen grid max-w-full
+    @apply p-0 w-screen grid max-w-full
   }
 
   .topLevelDivStyling {
