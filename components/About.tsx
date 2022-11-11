@@ -24,7 +24,7 @@ export default function About(): JSX.Element {
                 <div className={aboutCopyDivStyling}>
                     <p className={aboutCopyStyling}>
                         They say <i className="text-one-dark-lightYellow">a jack of all trades is a master of none</i>, but
-                        most don't know that this axiom ends with <i className="text-one-dark-lightYellow">but oftentimes better
+                        most do not know that this axiom ends with <i className="text-one-dark-lightYellow">but oftentimes better
                         than a master of one</i>. As a passionate <b className="text-one-dark-lightRed">full stack software 
                         developer</b> and <b className="text-one-dark-lightRed">agilist</b>,<b className="text-one-dark-green"> business 
                         professional</b> with an extensive background in both <b className="text-one-dark-green">sales</b> and 
