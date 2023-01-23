@@ -17,6 +17,11 @@
     overflow-x: hidden;
     background-color: #2b302f;
   }
+
+  pre {
+    padding: 0.5rem 1rem;
+    width: fit-content;
+  }
 }
 
 @layer components {
@@ -27,4 +32,8 @@
   .topLevelDivStyling {
     @apply flex flex-row w-auto
   }
+}
+
+a {
+  @apply text-one-dark-blue
 }

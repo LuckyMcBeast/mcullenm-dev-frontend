@@ -15,8 +15,8 @@ export default function BlogCard(props: Props): JSX.Element {
   const { blogData } = props;
 
   function contentPreview() {
-    if (blogData.content[0] !== undefined)
-      return <p className={blogContentStyling}>{blogData.content[0].value}</p>;
+    const preview = blogData.content.find(content => content.type == "p")?.value
+    if(preview != undefined) { return <p className={blogContentStyling}>{preview}</p>; }  
   }
 
   return (

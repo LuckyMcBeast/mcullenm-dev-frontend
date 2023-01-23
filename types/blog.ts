@@ -8,7 +8,13 @@ interface Blog {
 interface Content {
     position: number,
     type: string,
-    value: string
+    value: string,
+    meta: Meta | null
 }
 
-export type { Blog, Content }
+interface Meta {
+    lang: string | null,
+    altText: string | null
+}
+
+export type { Blog, Content, Meta }

@@ -1,8 +1,11 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next"
 import { ParsedUrlQuery } from "querystring"
 import { getBlog, getBlogs } from "../../client/getBlogs"
+import Code from "../../components/Code"
 import { Global } from "../../components/Global"
-import { Blog, Content } from "../../types/blog"
+import { Blog, Content, Meta } from "../../types/blog"
+
+
 
 interface Params extends ParsedUrlQuery {
     id: string
@@ -39,12 +42,40 @@ const contentDivStyling = "flex flex-col gap-y-3 p-1"
 const h1Styling = "text-2xl font-bold text-rocket-blue-600"
 const h3Styling = "text-sm italic text-one-dark-lightYellow"
 
+function contentP(position: number, value: string): JSX.Element {
+    return <p key={position} className="break-words" data-testid={`content-${position}`}>{value}</p>
+}
+
+function contentCode(position: number, value: string, meta: Meta): JSX.Element {
+    return <Code key={position} code={value} meta={meta} data-testid={`content-${position}`}/>
+}
+
+function contentA(position: number, value: string, meta: Meta | null): JSX.Element {
+    console.log(meta?.altText)
+    if(meta?.altText){
+        return <a key={position} href={value} data-testid={`content-${position}`}>{meta.altText}</a>
+    }
+    return <a href={value}>{value}</a>
+}
+
 function displayContent(contents: Content[] | null | undefined) {
     return contents?.map(
-        (content) => {
-            if (content.type === "p")
-                return <p key={content.position} className="break-words" data-testid={`content-${content.position}`}>{content.value}</p>
-            return <div key={content.position}></div>
+        ({type, position, value, meta}) => {
+            switch(type) {
+                case "p": {
+                    return contentP(position, value)
+                }
+                case "a": {
+                    return contentA(position, value, meta)
+                }
+                case "code": {
+                    if(meta?.lang) {
+                        return contentCode(position, value, meta)
+                    }
+                }
+                default:
+                    return <div key={position}></div>
+            }
         }
     )
 }
