@@ -34,11 +34,11 @@
   }
 }
 
-code {
-  word-wrap: break-word;
+code, a {
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 
 a {
   @apply text-one-dark-blue
-  overflow-wrap: break-word;
 }
