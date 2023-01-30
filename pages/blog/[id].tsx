@@ -51,7 +51,6 @@ function contentCode(position: number, value: string, meta: Meta): JSX.Element {
 }
 
 function contentA(position: number, value: string, meta: Meta | null): JSX.Element {
-    console.log(meta?.altText)
     if(meta?.altText){
         return <a key={position} href={value} data-testid={`content-${position}`}>{meta.altText}</a>
     }
@@ -82,7 +81,6 @@ function displayContent(contents: Content[] | null | undefined) {
 
 
 function BlogView(props: Props): JSX.Element {
-    console.log(props.blog)
     if (props.blog === null || props.blog === undefined || Object.keys(props.blog).length === 0) {
         return <h2 className="text-one-dark-white text-center p-10">Looks like nothing is here...</h2>
     } else {
