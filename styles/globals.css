@@ -34,10 +34,11 @@
   }
 }
 
-code, a {
-  overflow-wrap: break-word;
+code {
+  word-wrap: break-word;
 }
 
 a {
   @apply text-one-dark-blue
+  overflow-wrap: break-word;
 }
