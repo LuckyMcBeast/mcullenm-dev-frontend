@@ -8,3 +8,4 @@ Front-End Next.js Web Application for mcullenm.dev
 - Typescript
 - Vercel
 - TailWind CSS
+
